@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 function NewPlantForm({ onAddPlant }) {
   const [formData, setFormData] = useState({
@@ -17,7 +17,7 @@ function NewPlantForm({ onAddPlant }) {
     fetch("http://localhost:6001/plants", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...formData, soldOut: false })
+      body: JSON.stringify(formData),
     })
       .then((r) => r.json())
       .then((newPlant) => {

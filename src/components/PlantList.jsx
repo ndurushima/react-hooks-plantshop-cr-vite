@@ -3,7 +3,7 @@ import PlantCard from "./PlantCard";
 
 function PlantList({ plants, onToggleSoldOut }) {
   return (
-    <ul className="cards">
+    <ul className="cards" data-testid="plant-list">
       {plants.map((plant) => (
         <PlantCard
           key={plant.id}

@@ -20,11 +20,11 @@ function PlantPage() {
 
   function handleToggleSoldOut(id) {
     setPlants((prev) => 
-      prev.map((plants) => 
-      plants.id === id ? {...plants, soldOut: !plants.soldOut } : plants ));
+      prev.map((plant) => 
+      plant.id === id ? {...plant, soldOut: !plant.soldOut } : plant ));
   }
 
-  const plantsToDisplay = plants.filter((plants) => plants.name.toLowerCase().includes(searchTerm.toLowerCase())
+  const plantsToDisplay = plants.filter((plant) => plant.name.toLowerCase().includes(searchTerm.toLowerCase())
 );
 
   return (
